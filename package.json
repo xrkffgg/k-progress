@@ -5,8 +5,7 @@
   "files": [
     "dist"
   ],
-  "private": false,
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "private": false,   
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
