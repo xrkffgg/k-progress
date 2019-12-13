@@ -15,7 +15,10 @@ $error-color: #f56c6c;
     display: flex;
     align-items: center;
     &-outer {
-      width: calc(100% - 55px);
+      width: 100%;
+      display: inline-block;
+      margin-right: -55px;
+      padding-right: 50px;
       &-bg {
         width: 100%;
         position: relative;
@@ -47,7 +50,6 @@ $error-color: #f56c6c;
     }
 
     &-text {
-      width: 55px;
       margin-left: 10px;
       text-align: left;
       word-break: keep-all;
