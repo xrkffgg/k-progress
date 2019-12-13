@@ -17,6 +17,8 @@ $error-color: #f56c6c;
     &-outer {
       width: 100%;
       display: inline-block;
+      vertical-align: middle;
+      box-sizing: border-box;
       margin-right: -55px;
       padding-right: 50px;
       &-bg {
@@ -51,6 +53,8 @@ $error-color: #f56c6c;
 
     &-text {
       margin-left: 10px;
+      display: inline-block;
+      vertical-align: middle;
       text-align: left;
       word-break: keep-all;
     }

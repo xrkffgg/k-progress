@@ -1,13 +1,9 @@
 <template>
   <div>
-    <k-progress
-      :percent="50"
-      :show-text="true" 
-      active
-      :format="fooo"
-      :active-color="colors"
-      :line-height="10">
-    </k-progress>
+    <k-progress :percent="50" ></k-progress>
+    <k-progress :percent="60" :show-text="false" ></k-progress>
+    <k-progress :percent="80" :format="format"></k-progress>
+    <k-progress :percent="100" :format="format"></k-progress>
   </div>
 </template>
 
@@ -20,8 +16,11 @@ export default {
   },
 
   methods: {
-    fooo(percent) {
-      return percent + '百分'
+    format(percent) {
+      if(percent == 100){
+        return '^_^'
+      }
+      return 'QAQ'
     }
   },
 }
