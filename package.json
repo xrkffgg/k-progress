@@ -10,7 +10,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "package": "vue-cli-service build --target lib --name k-progress ./src/components/index.js"
+    "package": "vue-cli-service build --target lib --name k-progress"
   },
   "dependencies": {
     "core-js": "^3.4.3",
