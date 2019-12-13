@@ -1,0 +1,30 @@
+{
+  "name": "k-progress",
+  "version": "0.1.0",
+  "main": "./dist/k-progress.common.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "package": "vue-cli-service build --target lib --name k-progress ./src/components/index.js"
+  },
+  "dependencies": {
+    "core-js": "^3.4.3",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
