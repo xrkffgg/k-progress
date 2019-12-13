@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import kProgress from './progress.vue';
+import './index.scss';
 
 const Components = {
   kProgress

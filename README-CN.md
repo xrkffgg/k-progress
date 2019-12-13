@@ -3,6 +3,7 @@
 > 一个 Vue 插件，线性进度条。
 
 [English](./README.md) | 简体中文
+
 ## 📦 安 装
 ```
 npm install -S k-progress
@@ -11,7 +12,8 @@ npm install -S k-progress
 ## 🔨 开始使用
 ```
 // main.js
-import 'kProgress';
+import 'k-progress';
+import 'k-progress/dist/k-progress.css';
 ```
 ## 📔 参 数
 |    参 数     |     类 型      |  默认值   |             可选值              |             说 明             |

@@ -7,12 +7,13 @@
         class="k-progress-outer-bg"
         :style="'background:' + bgColor + '; height:' + lineHeight + 'px;'">
       </div>
-      <div 
+      <div
         class="k-progress-outer-line"
         :class="type ? 'k-progress-outer-line-' + type : ''"
         :style="getLineStyle()">
-        <div 
-          :class="active ? 'k-progress-outer-line-active' : ''"
+        <div
+          v-if="active"
+          class="k-progress-outer-line-active"
           :style="getActiveStyle()">
         </div>
       </div>
@@ -104,76 +105,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-$default-color: #409eff;
-$success-color: #67c23a;
-$warning-color: #e6a23c;
-$error-color: #f56c6c;
-
-  .k-progress {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: #606266;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    &-outer {
-      width: calc(100% - 55px);
-      &-bg {
-        width: 100%;
-        position: relative;
-        z-index: -1;
-        border-radius: 100px;
-      }
-      &-line {
-        background: $default-color;
-        border-radius: 100px;
-        transition: all .4s cubic-bezier(.08, .82, .17, 1) 0s;
-        &-success {
-          background: $success-color;
-        }
-        &-warning {
-          background: $warning-color;
-        }
-        &-error {
-          background: $error-color;
-        }
-        &-active {
-          background: #fff;
-          height: inherit;
-          border-radius: 10px;
-          opacity: 0;
-          animation: progress-active 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
-          content: '';
-        }
-      }
-    }
-
-    &-text {
-      width: 55px;
-      margin-left: 10px;
-      text-align: left;
-      word-break: keep-all;
-    }
-  }
-
-@keyframes progress-active {
-  0% {
-    width: 0;
-    opacity: 0.2;
-  }
-  30% {
-    width: 0;
-    opacity: 0.6;
-  }
-  100% {
-    width: 100%;
-    opacity: 0;
-  }
-}
-</style>

@@ -1,16 +1,15 @@
 {
   "name": "k-progress",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "./dist/k-progress.common.js",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "package": "vue-cli-service build --target lib --name k-progress"
+    "package": "vue-cli-service build --target lib --k-progress main ./src/components/index.js"
   },
   "dependencies": {
     "core-js": "^3.4.3",
