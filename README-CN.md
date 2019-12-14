@@ -10,6 +10,9 @@
 
 [English](./README.md) | 简体中文
 
+## 📚 教 程
+[k-progress](https://xrkffgg.github.io/Knotes/course/k-progress.html)
+
 ## 📦 安 装
 ```
 npm install -S k-progress
