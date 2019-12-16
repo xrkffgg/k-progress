@@ -38,8 +38,8 @@ import 'k-progress/dist/k-progress.css';
 |    active    |    Boolean     |  `false`  |                                 |     Whether to enable dynamic effects     |
 | active-color | String / Array |           |                                 |           Dynamic effect color            |
 
-## 🖊 Explain
-If you are in use, find the problem, welcome to correct!
+## 🖊 Thanks
+Thank you for using, if you find some problems, welcome to correct!
 - [Issues](https://github.com/xrkffgg/k-progress/issues) 
 - [PR](https://github.com/xrkffgg/k-progress/pulls)
 

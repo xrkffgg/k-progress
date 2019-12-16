@@ -37,8 +37,8 @@ import 'k-progress/dist/k-progress.css';
 |    active    |    Boolean     |  `false`  |                                 |         是否开启动效          |
 | active-color | String / Array |           |                                 |           动效颜色            |
 
-## 🖊 说 明
-若您在使用中，发现问题，欢迎指正！ 
+## 🖊 欢 迎
+感谢您的使用，若您发现问题任何问题，欢迎指正！ 
 - [Issues](https://github.com/xrkffgg/k-progress/issues) 
 - [PR](https://github.com/xrkffgg/k-progress/pulls)
 
