@@ -11,6 +11,19 @@
     "build": "vue-cli-service build",
     "package": "vue-cli-service build --target lib --k-progress main ./src/components/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:xrkffgg/k-progress.git"
+  },
+  "homepage": "https://xrkffgg.github.io/Knotes/course/k-progress.html",
+  "keywords": [
+    "vue",
+    "components"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xrkffgg/k-progress/issues"
+  },
   "dependencies": {
     "core-js": "^3.4.3",
     "vue": "^2.6.10"
