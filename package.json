@@ -1,6 +1,6 @@
 {
   "name": "k-progress",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./dist/k-progress.common.js",
   "files": [
     "dist"
