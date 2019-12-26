@@ -26,17 +26,17 @@ import 'k-progress';
 import 'k-progress/dist/k-progress.css';
 ```
 ## 📔 参 数
-|    参 数     |     类 型      |  默认值   |             可选值              |             说 明             |
-| :----------: | :------------: | :-------: | :-----------------------------: | :---------------------------: |
-|   percent    |     Number     |     0     |              0-100              |        百分比（必填）         |
-| line-height  |     Number     |     6     |                                 |          进度条高度           |
-|     type     |     String     |           | `success` / `warning` / `error` |          进度条类型           |
-|    color     | String / Array |           |                                 |          进度条颜色           |
-|   bg-color   |     String     | `#ebeef5` |            颜色代码             |        进度条背景颜色         |
-|  show-text   |    Boolean     |  `true`   |                                 |      是否显示进度条文字       |
-|    format    |    Function    |           |                                 | 自定义文字显示，参数为percent |
-|    active    |    Boolean     |  `false`  |                                 |         是否开启动效          |
-| active-color | String / Array |           |                                 |           动效颜色            |
+|    参 数     |           类 型           |  默认值   |             可选值              |                      说 明                       |
+| :----------: | :-----------------------: | :-------: | :-----------------------------: | :----------------------------------------------: |
+|   percent    |          Number           |     0     |              0-100              |                  百分比（必填）                  |
+| line-height  |          Number           |     6     |                                 |                    进度条高度                    |
+|     type     |          String           |           | `success` / `warning` / `error` |                    进度条类型                    |
+|    color     | String / Array / Function |           |                                 | 进度条颜色；当使用 `Function` 时，参数为 `percent` |
+|   bg-color   |          String           | `#ebeef5` |            颜色代码             |                  进度条背景颜色                  |
+|  show-text   |          Boolean          |  `true`   |                                 |                是否显示进度条文字                |
+|    format    |         Function          |           |                                 |          自定义文字显示，参数为percent           |
+|    active    |          Boolean          |  `false`  |                                 |                   是否开启动效                   |
+| active-color |      String / Array       |           |                                 |                     动效颜色                     |
 
 ## 📒 更新日志
 [更新日志](./CHANGELOG-CN.md)

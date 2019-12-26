@@ -1,6 +1,6 @@
 ## 📒 ChangeLog
 
-### v1.1.0
+### v1.1.1
 `2019-12-26`
 
 - 🎉 Progress bar color support `Function` setting

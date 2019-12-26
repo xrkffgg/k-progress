@@ -27,17 +27,17 @@ import 'k-progress/dist/k-progress.css';
 ```
 
 ## 📔 Attributes
-|  Attribute   |      Type      |  Default  |            Optional             |                  explain                  |
-| :----------: | :------------: | :-------: | :-----------------------------: | :---------------------------------------: |
-|   percent    |     Number     |     0     |              0-100              |            Percent (Required)             |
-| line-height  |     Number     |     6     |                                 |            Progress bar height            |
-|     type     |     String     |           | `success` / `warning` / `error` |             Progress bar type             |
-|    color     | String / Array |           |                                 |            Progress bar color             |
-|   bg-color   |     String     | `#ebeef5` |           Color code            |       Progress bar background color       |
-|  show-text   |    Boolean     |  `true`   |                                 |     Whether to show progress bar text     |
-|    format    |    Function    |           |                                 | Custom text display, parameter is percent |
-|    active    |    Boolean     |  `false`  |                                 |     Whether to enable dynamic effects     |
-| active-color | String / Array |           |                                 |           Dynamic effect color            |
+|  Attribute   |           Type            |  Default  |            Optional             |                               explain                                |
+| :----------: | :-----------------------: | :-------: | :-----------------------------: | :------------------------------------------------------------------: |
+|   percent    |          Number           |     0     |              0-100              |                          Percent (Required)                          |
+| line-height  |          Number           |     6     |                                 |                         Progress bar height                          |
+|     type     |          String           |           | `success` / `warning` / `error` |                          Progress bar type                           |
+|    color     | String / Array / Function |           |                                 | Progress bar color; When using `Function`, the argument is `percent` |
+|   bg-color   |          String           | `#ebeef5` |           Color code            |                    Progress bar background color                     |
+|  show-text   |          Boolean          |  `true`   |                                 |                  Whether to show progress bar text                   |
+|    format    |         Function          |           |                                 |              Custom text display, parameter is percent               |
+|    active    |          Boolean          |  `false`  |                                 |                  Whether to enable dynamic effects                   |
+| active-color |      String / Array       |           |                                 |                         Dynamic effect color                         |
 
 ## 📒 ChangeLog
 [ChangeLog](./CHANGELOG.md)
