@@ -57,7 +57,7 @@ export default {
       default: 6
     },
     color: {
-      type: [String, Array],
+      type: [String, Array, Function],
       default: ''
     },
     activeColor: {
@@ -87,6 +87,8 @@ export default {
           result += `background: ${this.color};`;
         } else if (typeof(this.color) === 'object' && this.color.length == 2) {
           result += `background: linear-gradient(90deg, ${this.color[0]} 0%, ${this.color[1]} 100%);`;
+        } else if (typeof(this.color) === 'function') {
+          result += `background: ${this.color(this.percent)};`;
         }
       }
       return result;

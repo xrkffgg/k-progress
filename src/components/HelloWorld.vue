@@ -1,9 +1,6 @@
 <template>
   <div>
-    <k-progress :percent="50" ></k-progress>
-    <k-progress :percent="60" :show-text="false" ></k-progress>
-    <k-progress :percent="80" :format="format"></k-progress>
-    <k-progress :percent="100" :format="format"></k-progress>
+    <k-progress :percent="pers" :color="getColor"></k-progress>
   </div>
 </template>
 
@@ -11,16 +8,23 @@
 export default {
   data() {
     return {
-      colors: ['#22075e', '#c41d7f'],
+      pers: 10,
     }
   },
 
+  mounted () {
+    setTimeout(() =>{
+      this.pers = 100
+    },2000);
+  },
+
   methods: {
-    format(percent) {
+    getColor(percent) {
       if(percent == 100){
-        return '^_^'
+        return '#40a9ff'
+      } else {
+        return '#9254de'
       }
-      return 'QAQ'
     }
   },
 }

@@ -39,6 +39,9 @@ import 'k-progress/dist/k-progress.css';
 |    active    |    Boolean     |  `false`  |                                 |     Whether to enable dynamic effects     |
 | active-color | String / Array |           |                                 |           Dynamic effect color            |
 
+## 📒 ChangeLog
+[ChangeLog](./CHANGELOG.md)
+
 ## 🖊 Thanks
 Thank you for using, if you find some problems, welcome to correct!
 - [Issues](https://github.com/xrkffgg/k-progress/issues) 
