@@ -15,15 +15,15 @@ English | [简体中文](./README-CN.md)
 [k-progress](https://xrkffgg.github.io/Knotes/course/k-progress.html)
 
 ## 📦 Install
-```
+```bash
 npm install -S k-progress
 ```
 
 ## 🔨 Begin Start
-```
+```js
 // main.js
-import 'k-progress';
-import 'k-progress/dist/k-progress.css';
+import KProgress from 'k-progress';
+Vue.component('k-progress', KProgress);
 ```
 
 ## 📔 Attributes

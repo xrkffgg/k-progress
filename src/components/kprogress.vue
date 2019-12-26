@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: 'kProgress',
+  name: 'KProgress',
   props: {
     percent: {
       type: Number,

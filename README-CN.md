@@ -15,15 +15,15 @@
 [k-progress](https://xrkffgg.github.io/Knotes/course/k-progress.html)
 
 ## 📦 安 装
-```
+```bash
 npm install -S k-progress
 ```
 
 ## 🔨 开始使用
-```
+```js
 // main.js
-import 'k-progress';
-import 'k-progress/dist/k-progress.css';
+import KProgress from 'k-progress';
+Vue.component('k-progress', KProgress);
 ```
 ## 📔 参 数
 |    参 数     |           类 型           |  默认值   |             可选值              |                      说 明                       |

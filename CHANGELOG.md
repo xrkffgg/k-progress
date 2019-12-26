@@ -1,11 +1,11 @@
 ## 📒 ChangeLog
 
-### v1.1.1
+### v1.1
 `2019-12-26`
 
 - 🎉 Progress bar color support `Function` setting
 
-### v1.0.3
+### v1.0
 `2019-12-18`
 
 - 🌟 Progress bar custom color
