@@ -1,6 +1,36 @@
 <template>
   <div>
-    <k-progress :percent="pers" :color="getColor"></k-progress>
+    <k-progress 
+      status="success" 
+      type="line"
+      :percent="20" >
+    </k-progress>
+    <k-progress 
+      active 
+      status="error" 
+      type="lump"
+      :cut-width="4"
+      :percent="50" >
+    </k-progress>
+    <k-progress 
+      active 
+      status="error" 
+      type="line"
+      :border="false"
+      :color="['#40a9ff', '#5cdbd3']"
+      :percent="60" >
+    </k-progress>
+    <k-progress 
+      active 
+      status="error" 
+      type="lump"
+      :border="false"
+      :line-height="8"
+      :cut-width="4"
+      :cut-color="'#40a9ff'"
+      :color="['#f5af19', '#f12711']"
+      :percent="80" >
+    </k-progress>
   </div>
 </template>
 
@@ -8,24 +38,10 @@
 export default {
   data() {
     return {
-      pers: 10,
     }
-  },
-
-  mounted () {
-    setTimeout(() =>{
-      this.pers = 100
-    },2000);
   },
 
   methods: {
-    getColor(percent) {
-      if(percent == 100){
-        return '#40a9ff'
-      } else {
-        return '#9254de'
-      }
-    }
   },
 }
 </script>

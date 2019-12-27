@@ -5,16 +5,28 @@
       class="k-progress-outer">
       <div
         class="k-progress-outer-bg"
-        :style="'background:' + bgColor + '; height:' + lineHeight + 'px;'">
+        :class="border ? 'k-progress-outer-bg-border' : ''"
+        :style="getOuterStyle()">
       </div>
       <div
+        :id="`k-progress-line-${idNow}`"
         class="k-progress-outer-line"
-        :class="type ? 'k-progress-outer-line-' + type : ''"
+        :class="status ? 'k-progress-outer-line-' + status : ''"
         :style="getLineStyle()">
         <div
           v-if="active"
           class="k-progress-outer-line-active"
           :style="getActiveStyle()">
+        </div>
+      </div>
+      <div
+        v-if="type === 'lump'"
+        class="k-progress-outer-cut"
+        :style="getCutStyle()">
+        <div
+          v-for="item in items"
+          :key="item"
+          :style="getCutBarStyle()">
         </div>
       </div>
     </div>
@@ -48,7 +60,24 @@ export default {
       type: String,
       default: '#ebeef5'
     },
+    cutColor: {
+      type: String,
+      default: '#ebeef5'
+    },
+    cutWidth: {
+      type: Number,
+      default: 1,
+    },
     type: {
+      type: String,
+      default: 'line',
+      validator: val => ['line', 'lump',].indexOf(val) > -1
+    },
+    border: {
+      type: Boolean,
+      default: true
+    },
+    status: {
       type: String,
       validator: val => ['success', 'warning', 'error'].indexOf(val) > -1
     },
@@ -66,6 +95,12 @@ export default {
     },
     format: Function
   },
+  data() {
+    return {
+      items: [],
+      idNow: '',
+    }
+  },
   computed: {
     content() {
       if (typeof this.format === 'function') {
@@ -75,14 +110,25 @@ export default {
       }
     }
   },
+  mounted () {
+    if (this.type === 'lump') {
+      this.countCut()
+    }
+    this.idNow = this.getUUID()
+  },
   methods: {
+    getOuterStyle(){
+      let result = '';
+      result += `background: ${this.bgColor};`;
+      result += `height: ${this.lineHeight}px;`;
+      return result;
+    },
+
     getLineStyle() {
       let result = '';
       result += `width: ${this.percent}%;`;
-      if(this.lineHeight){
-        result += `height: ${this.lineHeight}px; margin-top: -${this.lineHeight}px;`;
-      }
-      if(this.color){
+      result += `height: ${this.lineHeight}px; margin-top: -${this.lineHeight}px;`;
+      if (this.color) {
         if (typeof(this.color) === 'string') {
           result += `background: ${this.color};`;
         } else if (typeof(this.color) === 'object' && this.color.length == 2) {
@@ -91,11 +137,15 @@ export default {
           result += `background: ${this.color(this.percent)};`;
         }
       }
+      if(!this.border){
+        result += `border-radius: 0px`;
+      }
       return result;
     },
+
     getActiveStyle() {
       let result = '';
-      if(this.activeColor){
+      if (this.activeColor) {
         if (typeof(this.activeColor) === 'string') {
           result += `background: ${this.activeColor};`;
         } else if (typeof(this.activeColor) === 'object' && this.activeColor.length == 2) {
@@ -103,6 +153,38 @@ export default {
         }
       }
       return result;
+    },
+
+    countCut() {
+      const that = this;
+      let kpl = document.getElementById(`k-progress-line-${this.idNow}`)
+      let kplSet = setInterval(() =>{
+        kpl = document.getElementById(`k-progress-line-${this.idNow}`)
+        if(kpl){
+          clearInterval(kplSet);
+          let lno = parseInt(kpl.offsetWidth / (that.lineHeight + that.cutWidth));
+          that.items = [...Array(lno).keys()];
+        }
+      }, 1)
+    },
+
+    getCutStyle() {
+      let result = '';
+      result += `height: ${this.lineHeight}px; margin-top: -${this.lineHeight}px;`;
+      return result;
+    },
+
+    getCutBarStyle() {
+      let result = '';
+      result += `width: ${this.lineHeight}px;`;
+      result += `border-right: ${this.cutWidth}px solid ${this.cutColor};`;
+      return result;
+    },
+
+    getUUID () {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+        return (c === 'x' ? (Math.random() * 16 | 0) : ('r&0x3' | '0x8')).toString(16)
+      })
     },
   },
 }

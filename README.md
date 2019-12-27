@@ -31,11 +31,15 @@ Vue.component('k-progress', KProgress);
 | :----------: | :-----------------------: | :-------: | :-----------------------------: | :------------------------------------------------------------------: |
 |   percent    |          Number           |     0     |              0-100              |                          Percent (Required)                          |
 | line-height  |          Number           |     6     |                                 |                         Progress bar height                          |
-|     type     |          String           |           | `success` / `warning` / `error` |                          Progress bar type                           |
+|     type     |          String           |  `line`   |         `line` / `lump`         |                          Progress bar type                           |
+|    status    |          String           |           | `success` / `warning` / `error` |                         Progress bar status                          |
 |    color     | String / Array / Function |           |                                 | Progress bar color; When using `Function`, the argument is `percent` |
 |   bg-color   |          String           | `#ebeef5` |           Color code            |                    Progress bar background color                     |
+|    border    |          Boolean          |  `true`   |                                 |                             Whether arc                              |
 |  show-text   |          Boolean          |  `true`   |                                 |                  Whether to show progress bar text                   |
 |    format    |         Function          |           |                                 |              Custom text display, parameter is percent               |
+|  cut-width   |          Number           |     1     |                                 |                             `lump` width                             |
+|  cut-color   |          String           | `#ebeef5` |           Color code            |                             `lump` color                             |
 |    active    |          Boolean          |  `false`  |                                 |                  Whether to enable dynamic effects                   |
 | active-color |      String / Array       |           |                                 |                         Dynamic effect color                         |
 

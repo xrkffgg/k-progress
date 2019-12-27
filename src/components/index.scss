@@ -3,62 +3,67 @@ $success-color: #67c23a;
 $warning-color: #e6a23c;
 $error-color: #f56c6c;
 
-  .k-progress {
+.k-progress {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #606266;
+  font-size: 14px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  &-outer {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: #606266;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    &-outer {
+    margin-right: -55px;
+    padding-right: 50px;
+    &-bg {
       width: 100%;
-      display: inline-block;
-      vertical-align: middle;
-      box-sizing: border-box;
-      margin-right: -55px;
-      padding-right: 50px;
-      &-bg {
-        width: 100%;
-        position: relative;
+      position: relative;
+      &-border {
         border-radius: 100px;
-      }
-      &-line {
-        position: relative;
-        background: $default-color;
-        border-radius: 100px;
-        transition: all .4s cubic-bezier(.08, .82, .17, 1) 0s;
-        &-success {
-          background: $success-color;
-        }
-        &-warning {
-          background: $warning-color;
-        }
-        &-error {
-          background: $error-color;
-        }
-        &-active {
-          background: #fff;
-          height: inherit;
-          border-radius: 10px;
-          opacity: 0;
-          animation: progress-active 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
-          content: '';
-        }
       }
     }
-
-    &-text {
-      margin-left: 10px;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: left;
-      word-break: keep-all;
+    &-line {
+      position: relative;
+      background: $default-color;
+      border-radius: 100px;
+      transition: all .4s cubic-bezier(.08, .82, .17, 1) 0s;
+      &-success {
+        background: $success-color;
+      }
+      &-warning {
+        background: $warning-color;
+      }
+      &-error {
+        background: $error-color;
+      }
+      &-active {
+        background: #fff;
+        height: inherit;
+        border-radius: 10px;
+        opacity: 0;
+        animation: progress-active 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+        content: '';
+      }
+    }
+    &-cut {
+      position: relative;
+      display: flex;
     }
   }
+
+  &-text {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    word-break: keep-all;
+  }
+}
 
 @keyframes progress-active {
   0% {
