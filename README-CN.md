@@ -36,7 +36,7 @@ Vue.component('k-progress', KProgress);
 |   bg-color   |          String           | `#ebeef5` |            颜色代码             |                   进度条背景颜色                   |
 |    border    |          Boolean          |  `true`   |                                 |                      是否圆弧                      |
 |  show-text   |          Boolean          |  `true`   |                                 |                 是否显示进度条文字                 |
-|    format    |         Function          |           |                                 |           自定义文字显示，参数为percent            |
+|    format    |         Function          |           |                                 |           自定义文字显示，参数为 `percent`            |
 |  cut-width   |          Number           |     1     |                                 |                    `lump` 宽度                     |
 |  cut-color   |          String           | `#ebeef5` |            颜色代码             |                    `lump` 颜色                     |
 |    active    |          Boolean          |  `false`  |                                 |                    是否开启动效                    |
