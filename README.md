@@ -37,7 +37,7 @@ Vue.component('k-progress', KProgress);
 |   bg-color   |          String           | `#ebeef5` |           Color code            |                    Progress bar background color                     |
 |    border    |          Boolean          |  `true`   |                                 |                             Whether arc                              |
 |  show-text   |          Boolean          |  `true`   |                                 |                  Whether to show progress bar text                   |
-|    format    |         Function          |           |                                 |              Custom text display, parameter is percent               |
+|    format    |         Function          |           |                                 |              Custom text display, parameter is `percent`               |
 |  cut-width   |          Number           |     1     |                                 |                             `lump` width                             |
 |  cut-color   |          String           | `#ebeef5` |           Color code            |                             `lump` color                             |
 |    active    |          Boolean          |  `false`  |                                 |                  Whether to enable dynamic effects                   |
