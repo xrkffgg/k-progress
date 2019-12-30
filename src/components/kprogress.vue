@@ -89,6 +89,10 @@ export default {
       type: [String, Array, Function],
       default: ''
     },
+    colorFlow: {
+      type: Boolean,
+      default: false
+    },
     activeColor: {
       type: [String, Array],
       default: ''
@@ -127,18 +131,25 @@ export default {
     getLineStyle() {
       let result = '';
       result += `width: ${this.percent}%;`;
-      result += `height: ${this.lineHeight}px; margin-top: -${this.lineHeight}px;`;
+      result += `height: ${this.lineHeight}px;margin-top: -${this.lineHeight}px;`;
       if (this.color) {
         if (typeof(this.color) === 'string') {
           result += `background: ${this.color};`;
-        } else if (typeof(this.color) === 'object' && this.color.length == 2) {
-          result += `background: linear-gradient(90deg, ${this.color[0]} 0%, ${this.color[1]} 100%);`;
+        } else if (Array.isArray(this.color) && (this.color.length < 7)) {
+          // 只取 6 种颜色
+          let colors = '';
+          let i = this.color.length;
+          this.color.map((co, index) =>{ index === i - 1 ? colors += co : colors += co + ', ' })
+          result += `background: linear-gradient(to right, ${colors});`;
         } else if (typeof(this.color) === 'function') {
           result += `background: ${this.color(this.percent)};`;
         }
       }
       if(!this.border){
         result += `border-radius: 0px`;
+      }
+      if(this.colorFlow){
+        result += `animation: kp-flow 5s linear infinite`;
       }
       return result;
     },
@@ -147,9 +158,7 @@ export default {
       let result = '';
       if (this.activeColor) {
         if (typeof(this.activeColor) === 'string') {
-          result += `background: ${this.activeColor};`;
-        } else if (typeof(this.activeColor) === 'object' && this.activeColor.length == 2) {
-          result += `background: linear-gradient(90deg, ${this.activeColor[0]} 0%, ${this.activeColor[1]} 100%);`;
+          result = `background: ${this.activeColor};`;
         }
       }
       return result;

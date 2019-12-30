@@ -46,7 +46,7 @@ $error-color: #f56c6c;
         height: inherit;
         border-radius: 10px;
         opacity: 0;
-        animation: progress-active 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+        animation: kp-active 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
         content: '';
       }
     }
@@ -65,7 +65,7 @@ $error-color: #f56c6c;
   }
 }
 
-@keyframes progress-active {
+@keyframes kp-active {
   0% {
     width: 0;
     opacity: 0.2;
@@ -78,4 +78,9 @@ $error-color: #f56c6c;
     width: 100%;
     opacity: 0;
   }
+}
+
+@keyframes kp-flow {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(360deg); }
 }

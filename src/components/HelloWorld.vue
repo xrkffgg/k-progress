@@ -31,6 +31,24 @@
       :color="['#f5af19', '#f12711']"
       :percent="80" >
     </k-progress>
+
+     <k-progress 
+      active 
+      status="error" 
+      type="line"
+      :color-flow="true"
+      :color="['#40a9ff', '#5cdbd3', '#cf1322', '#722ed1']"
+      :percent="60" >
+    </k-progress>
+
+    <k-progress 
+      active 
+      status="error" 
+      type="lump"
+      :border="false"
+      :color="['#40a9ff', '#5cdbd3', '#cf1322', '#722ed1']"
+      :percent="60" >
+    </k-progress>
   </div>
 </template>
 
