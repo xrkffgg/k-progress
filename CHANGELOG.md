@@ -1,4 +1,8 @@
 ## 📒 ChangeLog
+### v1.4
+`2019-12-31`
+- 🎉 Added `flow-second` to set the flow speed
+
 ### v1.3
 `2019-12-30`
 - ❌ Remove `active-color` is `Array`

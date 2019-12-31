@@ -93,6 +93,11 @@ export default {
       type: Boolean,
       default: false
     },
+    flowSecond: {
+      type: Number,
+      default: 5,
+      validator: val => val => [1, 2, 3, 4, 5, 6].indexOf(val) > -1
+    },
     activeColor: {
       type: [String, Array],
       default: ''
@@ -149,7 +154,7 @@ export default {
         result += `border-radius: 0px`;
       }
       if(this.colorFlow){
-        result += `animation: kp-flow 5s linear infinite`;
+        result += `animation: kp-flow ${this.flowSecond}s linear infinite`;
       }
       return result;
     },

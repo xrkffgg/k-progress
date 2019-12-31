@@ -32,9 +32,15 @@
       :percent="80" >
     </k-progress>
 
-     <k-progress 
-      active 
-      status="error" 
+     <k-progress  
+      type="line"
+      :color-flow="true"
+      :flow-second="2"
+      :color="['#40a9ff', '#5cdbd3', '#cf1322', '#722ed1']"
+      :percent="60" >
+    </k-progress>
+
+    <k-progress  
       type="line"
       :color-flow="true"
       :color="['#40a9ff', '#5cdbd3', '#cf1322', '#722ed1']"

@@ -37,6 +37,7 @@ Vue.component('k-progress', KProgress);
 |    status    |          String           |           | `success` / `warning` / `error` |                                           Progress bar status                                            |
 |    color     | String / Array / Function |           |                                 | Progress bar color; When using `Array`, the limit is 6; When using `Function`, the argument is `percent` |
 |  color-flow  |          Boolean          |  `false`  |                                 |                                       Whether to enable color flow                                       |
+| flow-second  |          Number           |     5     |               1-6               |           The time required for the flow, that is, the smaller the time, the faster the speed            |
 |   bg-color   |          String           | `#ebeef5` |           Color code            |                                      Progress bar background color                                       |
 |    border    |          Boolean          |  `true`   |                                 |                                               Whether arc                                                |
 |  show-text   |          Boolean          |  `true`   |                                 |                                    Whether to show progress bar text                                     |
@@ -44,7 +45,7 @@ Vue.component('k-progress', KProgress);
 |  cut-width   |          Number           |     1     |                                 |                                               `lump` width                                               |
 |  cut-color   |          String           | `#ebeef5` |           Color code            |                                               `lump` color                                               |
 |    active    |          Boolean          |  `false`  |                                 |                                    Whether to enable dynamic effects                                     |
-| active-color |      String       |           |                                 |                                           Dynamic effect color                                           |
+| active-color |          String           |           |                                 |                                           Dynamic effect color                                           |
 
 ## 📒 ChangeLog
 [ChangeLog](./CHANGELOG.md)

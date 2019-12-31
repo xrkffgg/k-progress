@@ -36,6 +36,7 @@ Vue.component('k-progress', KProgress);
 |    status    |          String           |           | `success` / `warning` / `error` |                                    进度条状态                                     |
 |    color     | String / Array / Function |           |                                 | 进度条颜色；当使用`Array`时，限制个数为 6；当使用 `Function` 时，参数为 `percent` |
 |  color-flow  |          Boolean          |  `false`  |                                 |                                 是否开启颜色流动                                  |
+| flow-second  |          Number           |     5     |               1-6               |                        流动所需时间，即时间越小，速度越快                         |
 |   bg-color   |          String           | `#ebeef5` |            颜色代码             |                                  进度条背景颜色                                   |
 |    border    |          Boolean          |  `true`   |                                 |                                     是否圆弧                                      |
 |  show-text   |          Boolean          |  `true`   |                                 |                                是否显示进度条文字                                 |
@@ -43,7 +44,7 @@ Vue.component('k-progress', KProgress);
 |  cut-width   |          Number           |     1     |                                 |                                    `lump` 宽度                                    |
 |  cut-color   |          String           | `#ebeef5` |            颜色代码             |                                    `lump` 颜色                                    |
 |    active    |          Boolean          |  `false`  |                                 |                                   是否开启动效                                    |
-| active-color |      String       |           |                                 |                                     动效颜色                                      |
+| active-color |          String           |           |                                 |                                     动效颜色                                      |
 
 ## 📒 更新日志
 [更新日志](./CHANGELOG-CN.md)
