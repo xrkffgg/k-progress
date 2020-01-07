@@ -1,6 +1,6 @@
 {
   "name": "k-progress",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "main": "./dist/k-progress.umd.min.js",
   "files": [
     "dist"
@@ -8,7 +8,6 @@
   "private": false,
   "scripts": {
     "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "package": "vue-cli-service build --target lib --name k-progress ./src/components/index.js"
   },
   "repository": {
@@ -32,6 +31,9 @@
     "@vue/cli-plugin-babel": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
     "node-sass": "^4.12.0",
+    "pug": "^2.0.4",
+    "pug-html-loader": "^1.1.5",
+    "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10"
   },

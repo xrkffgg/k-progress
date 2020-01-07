@@ -1,5 +1,10 @@
 ## 📒 ChangeLog
 > [emoji](https://xrkffgg.github.io/Knotes/standard/#_1-emoji-%E6%8C%87%E5%8D%97)
+
+### v1.5 
+`2020-01-07`
+- ⚡️ Optimizing `HTML` with `pug`
+
 ### v1.4
 `2019-12-31`
 - 🆕 Added `flow-second` to set the flow speed

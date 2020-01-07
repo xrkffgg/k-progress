@@ -1,41 +1,12 @@
-<template>
-  <div
-    class="k-progress">
-    <div 
-      class="k-progress-outer">
-      <div
-        class="k-progress-outer-bg"
-        :class="border ? 'k-progress-outer-bg-border' : ''"
-        :style="getOuterStyle()">
-      </div>
-      <div
-        :id="`k-progress-line-${idNow}`"
-        class="k-progress-outer-line"
-        :class="status ? 'k-progress-outer-line-' + status : ''"
-        :style="getLineStyle()">
-        <div
-          v-if="active"
-          class="k-progress-outer-line-active"
-          :style="getActiveStyle()">
-        </div>
-      </div>
-      <div
-        v-if="type === 'lump'"
-        class="k-progress-outer-cut"
-        :style="getCutStyle()">
-        <div
-          v-for="item in items"
-          :key="item"
-          :style="getCutBarStyle()">
-        </div>
-      </div>
-    </div>
-    <div 
-      class="k-progress-text"
-      v-if="showText">
-      {{ content }}
-    </div>
-  </div>
+<template lang="pug">
+  .k-progress
+    .k-progress-outer
+      .k-progress-outer-bg(:class="border ? 'k-progress-outer-bg-border' : ''" :style="getOuterStyle()")
+      .k-progress-outer-line(:id="`k-progress-line-${idNow}`" :class="status ? 'k-progress-outer-line-' + status : ''" :style="getLineStyle()")
+        .k-progress-outer-line-active(v-if="active" :style="getActiveStyle()")
+      .k-progress-outer-cut(v-if="type === 'lump'" :style="getCutStyle()")
+        div(v-for="item in items" :key="item" :style="getCutBarStyle()")
+    .k-progress-text(v-if="showText") {{ content }}
 </template>
 
 <script>
