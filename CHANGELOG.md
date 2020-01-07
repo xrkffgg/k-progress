@@ -1,5 +1,5 @@
 ## 📒 ChangeLog
-> [emoji](https://xrkffgg.github.io/Knotes/standard/#_1-emoji-%E6%8C%87%E5%8D%97)
+> [emoji](https://xrkffgg.github.io/Knotes/standard/#_1-1-emoji-%E6%8C%87%E5%8D%97)
 
 ### v1.5 
 `2020-01-07`
