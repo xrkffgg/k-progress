@@ -16,6 +16,7 @@
   },
   "author": "xrkffgg",
   "homepage": "https://xrkffgg.github.io/Knotes/course/k-progress.html",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "keywords": [
     "vue",
     "components"
