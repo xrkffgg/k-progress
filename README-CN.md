@@ -11,6 +11,12 @@
 
 [English](./README.md) | 简体中文
 
+## 🎉 Vue3
+
+`k-progress` 现已支持 vue3，你可以来这里查看 [`k-progress-v3`](https://github.com/xrkffgg/k-progress-v3)。
+
+这个项目不再维护。谢谢！
+
 ## 📚 教 程
 [k-progress](https://xrkffgg.github.io/Knotes/course/k-progress.html)
 

@@ -9,7 +9,13 @@
 ![](https://img.shields.io/github/license/xrkffgg/k-progress?color=red&style=flat-square)
 ![](https://img.shields.io/npm/dt/k-progress?color=ff69b4&style=flat-square)
 
-English | [简体中文](./README-CN.md) 
+English | [简体中文](./README-CN.md)
+
+## 🎉 Vue3
+
+`k-progress` Now support vue3, you can find in [`k-progress-v3`](https://github.com/xrkffgg/k-progress-v3).
+
+And this will no longer be maintained. Thanks!
 
 ## 📚 Course
 [k-progress](https://xrkffgg.github.io/Knotes/course/k-progress.html)
