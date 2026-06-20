@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:xrkffgg/k-progress.git"
+    "url": "git+https://github.com/xrkffgg/k-progress.git"
   },
   "author": "xrkffgg",
   "homepage": "https://xrkffgg.github.io/Knotes/course/k-progress.html",
