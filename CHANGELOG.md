@@ -1,6 +1,13 @@
 ## 📒 ChangeLog
 > [emoji](https://xrkffgg.github.io/Knotes/standard/#_1-1-emoji-%E6%8C%87%E5%8D%97)
 
+### v1.6.0
+
+`2026-07-07`
+
+- ⚡️ chore: use public repository URL. [#4](https://github.com/xrkffgg/k-progress/pull/4) [@snkk2x-collab](https://github.com/snkk2x-collab)
+
+
 ### v1.5 
 `2020-01-07`
 - ⚡️ Optimizing `HTML` with `pug`
